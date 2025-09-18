@@ -1,0 +1,11 @@
+	{
+	  "name": "dynamic-selenium-tester",
+	  "version": "1.0.0",
+	  "scripts": {
+	    "test": "node index.js"
+	  },
+	  "dependencies": {
+	    "selenium-webdriver": "^4.15.0",
+	    "chromedriver": "^119.0.1"
+	  }
+	}

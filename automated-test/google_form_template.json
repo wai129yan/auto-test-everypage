@@ -1,0 +1,43 @@
+{
+  "name": "Google Form Submission - Data Driven",
+  "url": "https://docs.google.com/forms/d/e/1FAIpQLSdUJ6NIVXnYkFs84cdc2VIhzDbd9qE7jooOFyrTeByVMhsP3A/viewform?usp=dialog",
+  "steps": [
+    {
+      "action": "wait",
+      "duration": 3000
+    },
+    {
+      "action": "type",
+      "selector": "input[type='text']",
+      "value": "{{name}}"
+    },
+    {
+      "action": "type",
+      "selector": "input[type='date'][aria-labelledby='i11']",
+      "value": "{{birth_date}}"
+    },
+    {
+      "action": "type",
+      "selector": "input[aria-labelledby='i12 i15']",
+      "value": "{{phone}}"
+    },
+    {
+      "action": "type",
+      "selector": "textarea",
+      "value": "{{address}}"
+    },
+    {
+      "action": "type",
+      "selector": "input[type='date'][aria-labelledby='i27']",
+      "value": "{{created_date}}"
+    },
+    {
+      "action": "wait",
+      "duration": 2000
+    },
+    {
+      "action": "click",
+      "selector": "div[role='button'][jsname='M2UYVd']"
+    }
+  ]
+}

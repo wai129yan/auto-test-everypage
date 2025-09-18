@@ -1,0 +1,119 @@
+{
+  "name": "Batch Article Publisher",
+  "url": "https://tokyo:tokyo2024@dev-saas-cms2.webow.jp/admin", 
+  "steps": [
+    {
+      "action": "wait",
+      "duration": 3000
+    },
+  
+
+    {
+      "action": "type",
+      "selector": "input[type='text']",
+      "value": "outward"
+    },
+    {
+      "action": "type",
+      "selector": "input[type='password']",
+      "value": "ow_outward"
+    },
+    {
+      "action": "wait",
+      "duration": 1000
+    },
+    {
+      "action": "click",
+      "selector": "button[type='submit']"
+    },
+    {
+      "action": "wait",
+      "duration": 1000
+    },
+    
+    
+    {
+      "action": "navigate",
+      "url": "https://dev-saas-cms2.webow.jp/admin/?controller=article"
+    },
+    {
+      "action": "wait",
+      "duration": 1000
+    },
+    {
+      "action": "click",
+      "selector": ".main-content.grid_2 > .fixCategoryList > .fixCategoryListItem:first-child > a:first-child"
+    },
+    {
+      "action": "wait",
+      "duration": 1000
+    },
+    {
+      "action": "click",
+      "selector": ".main-content.grid_2 > .fixCategoryList > .fixCategoryListItem:nth-child(2) a:first-child"
+    },
+    {
+      "action": "click",
+      "selector": ".has-popupballoon.button.button-blue"
+    },
+    {
+      "action": "loop_article",
+      "data": "article_data.json",
+      "steps": [
+        {
+          "action": "type",
+          "selector": "textarea[name='title']",
+          "name": "title"
+        },
+        {
+          "action": "type",
+          "selector": "textarea[id='body_textbox']",
+          "name": "text"
+        },
+        {
+          "action": "type",
+          "selector": "input[name='open_start_date']",
+          "name": "open_start_date",
+          "format": "iso_date"
+        },
+        {
+          "action": "type",
+          "selector": "input[name='open_end_date']",
+          "name": "open_start_date",
+          "format": "iso_date"
+        },
+        {
+          "action": "wait",
+          "duration": 1000
+        },
+        {
+          "action": "click",
+          "selector": "button[rel='#save']",
+          "description": "sumbit"
+        },
+        {
+          "action": "wait",
+          "duration": 1000
+        },
+        {
+          "action": "wait",
+          "duration": 1000
+        },
+        {
+          "action": "click",
+          "selector": ".has-popupballoon.button.button-blue"
+        }
+      ],
+      "status_actions": {
+        "pending": {
+          "action": "click",
+          "selector": "button[rel='#edit']"
+        },
+        "public": {
+          "action": "click",
+          "selector": "button[rel='#open']"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+    "name": "CMS Single Article Creation",
+    "url": "https://tokyo:tokyo2024@dev-saas-cms2.webow.jp/admin",
+    "steps": [
+      {
+        "action": "wait",
+        "duration": 3000
+      },
+      {
+        "action": "type",
+        "selector": "input[type='text']",
+        "value": "outward"
+      },
+      {
+        "action": "type",
+        "selector": "input[type='password']",
+        "value": "ow_outward"
+      },
+      {
+        "action": "wait",
+        "duration": 1000
+      },
+      {
+        "action": "click",
+        "selector": "button[type='submit']"
+      },
+      {
+        "action": "wait",
+        "duration": 1000
+      },
+      {
+        "action": "navigate",
+        "url": "https://dev-saas-cms2.webow.jp/admin/?controller=article"
+      },
+      {
+        "action": "wait",
+        "duration": 1000
+      },
+      {
+        "action": "click",
+        "selector": ".main-content.grid_2 > .fixCategoryList > .fixCategoryListItem:first-child > a:first-child"
+      },
+      {
+        "action": "wait",
+        "duration": 1000
+      },
+      {
+        "action": "click",
+        "selector": ".main-content.grid_2 > .fixCategoryList > .fixCategoryListItem:nth-child(2) a:first-child"
+      },
+      {
+        "action": "click",
+        "selector": ".has-popupballoon.button.button-blue"
+      },
+      {
+        "action": "type",
+        "selector": "textarea[name='title']",
+        "value": "Test title"
+      },
+      {
+        "action": "type",
+        "selector": "textarea[id='body_textbox']",
+        "value": "Test body"
+      },
+      {
+        "action": "type",
+        "selector": "input[name='open_start_date']",
+        "value": "2023/08/05 10:00:00",
+        "format": "iso_date"
+      },
+      {
+        "action": "type",
+        "selector": "input[name='open_end_date']",
+        "value": "2023/12/15 16:30:00",
+        "format": "iso_date"
+      },
+      {
+        "action": "click",
+        "selector": "button[rel='#save']"
+      }
+    ]
+  }
